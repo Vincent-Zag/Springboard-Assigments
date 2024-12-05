@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Meme Generator</title>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h2>MEME GENERATOR</h2>
+
+		<form id="meme-url-form">
+			<label for="meme-url-input">Image URL</label>
+			<input
+					type="text"
+					id="meme-url-input"
+					placeholder="Enter Image URL"
+			>
+		</form>
+
+		<form id="top-meme-form">
+			<label for="top-meme-input">Top Form</label>
+			<input
+					type="text"
+					id="top-meme-input"
+					placeholder="Top Text"
+			>
+		</form>
+
+		<form id="bottom-meme-form">
+			<label for="bottom-meme-input">Bottom Form</label>
+			<input
+					type="text"
+					id="bottom-meme-input"
+					placeholder="Bottom Text"
+			>
+		</form>
+
+		<button id="new-meme-button">Generate Meme</button>
+
+		<div id="memes-container">
+			<!-- meme boxes will be appended here -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"] {
+  width: 500px; 
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#memes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  max-width: 2000px;
+  max-height: 2000px;
+}
+
+/* meme box */
+.meme-box {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 300px; 
+  text-align: center;
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 20px;
+}
+
+.meme-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* had to look up the font and type of format meme fonts are used  */
+.meme-text { 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 5px;
+  color: white; 
+  font-size: 2.5em; 
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; 
+  font-family: 'Impact', sans-serif; 
+  text-shadow: 2px 2px 5px black; 
+  background: rgba(0, 0, 0, 0); 
+  pointer-events: none; 
+}
+
+.top-text {
+  top: 10px;
+}
+
+.bottom-text {
+  bottom: 10px;
+}
+
+/* Meme box styling */
+.meme-box {
+  position: relative;
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 500px; /* Set a fixed width for the meme box */
+}
+
+/* Meme image styling */
+.meme-box img {
+  width: 100%; 
+  height: auto; 
+  display: block;
+}
+
+/* X Button*/
+.delete-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%; 
+  background-color: rgba(255, 255, 255, 0.3);  
+  border: none;
+  cursor: pointer;
+  display: none; 
+  font-size: 100px;  
+  color: rgb(212, 191, 191);
+  text-align: center;
+  line-height: 100%; 
+}
+
+/* Show delete button when hovering over the meme box */
+.meme-box:hover .delete-button {
+  display: block; 
+}
+
+/* Change the background color of the button on hover */
+.meme-box:hover .delete-button:hover {
+  background-color: rgba(196, 182, 182, 0.5);  
+}
